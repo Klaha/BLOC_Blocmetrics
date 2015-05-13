@@ -24,3 +24,6 @@ gem 'bootstrap-sass', '3.1.1.0'
 
 # Authentication
 gem 'devise'
+
+# Sensitive Data
+gem 'figaro', '1.0'
