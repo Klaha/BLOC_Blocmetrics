@@ -12,4 +12,37 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap
  */
+ 
+ .jumbotron {
+  margin-top: 75px;
+ }
+ 
+ .circ {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto;
+  background-color: green;
+}
+
+.icon {
+  margin-top: 18px;
+  margin-left: 1px;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: lime;
+}
+
+.white {
+  color: white;
+}
+
+.taggie {
+  margin-top: 20px;
+}
