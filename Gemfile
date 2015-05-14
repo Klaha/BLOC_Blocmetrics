@@ -17,6 +17,8 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 # BootStrap 3
@@ -27,3 +29,6 @@ gem 'devise'
 
 # Sensitive Data
 gem 'figaro', '1.0'
+
+# Seed Data
+gem 'faker'

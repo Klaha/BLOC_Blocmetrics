@@ -14,7 +14,7 @@
       <tbody>
         <% @registered_applications.each do |app| %>
           <tr>
-            <td class="text-center"><%= app.name %></td>
+            <td class="text-center"><%= link_to app.name, registered_application_path(app) %></td>
             <td class="text-center"><%= link_to "Read", read_app_path(app) %></td>
             <td class="text-center"><%= link_to "Delete", registered_applications_path(app), method: :delete %></td>
           </tr>

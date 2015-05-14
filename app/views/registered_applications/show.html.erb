@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+    <h1 class="text-center"><%= @registered_application.name %></h1>
+    <p class="text-center">http://www.<%= @registered_application.url %></p>
+    <br></br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="text-center">Event Name</th>
+          <th class="text-center">Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @events_name.each do |event_name| %>
+          <tr>
+            <% i = 0 %>
+            <td class="text-center"><%= @events_grouped[event_name][i].name %></td>
+            <td class="text-center"><%= @events_grouped[event_name].count %></td>
+            <% i = i + 1 %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    
+  </div>
+</div>

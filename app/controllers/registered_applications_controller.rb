@@ -22,6 +22,20 @@ class RegisteredApplicationsController < ApplicationController
     
   end
   
+  def show
+    @registered_application = RegisteredApplication.find(params[:id])
+    @events = @registered_application.events
+    @events_name = []
+    
+    @events.each do |event|
+      unless @events_name.include?(event.name)
+        @events_name << event.name
+      end
+    end
+    
+    @events_grouped = @registered_application.events.group_by(&:name)
+  end
+  
   def read
     @registered_application = RegisteredApplication.find(params[:id])
   end
