@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150513203841) do
+ActiveRecord::Schema.define(version: 20150514000546) do
+
+  create_table "registered_applications", force: true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "registered_applications", ["user_id"], name: "index_registered_applications_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
