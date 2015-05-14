@@ -6,14 +6,16 @@ class API::EventsController < ApplicationController
     
     if registered_application.nil?
       render json: "Unregistered application", status: :unprocessable_entity
-    end
-    
-    @event = registered_application.events.build(event_params)
-    
-    if @event.save
-      render json: @event, status: :created
     else
-      render @event.errors, status: :unprocessable_entity
+      
+      @event = registered_application.events.build(event_params)
+    
+      if @event.save
+        render json: @event, status: :created
+      else
+        render @event.errors, status: :unprocessable_entity
+      end
+      
     end
     
   end
