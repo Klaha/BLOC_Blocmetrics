@@ -1,7 +1,13 @@
+<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
 <div class="row">
   <div class="col-xs-6 col-xs-offset-3">
-    <h1 class="text-center"><%= @registered_application.name %></h1>
-    <p class="text-center">http://www.<%= @registered_application.url %></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class="text-center"><%= @registered_application.name %></h1>
+        <p class="text-center"><%= @registered_application.url %></p>
+      </div>
+    </div>
+    
     <br></br>
     <table class="table">
       <thead>
@@ -22,5 +28,10 @@
       </tbody>
     </table>
     
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <%= pie_chart @registered_application.events.group(:name).count %>
   </div>
 </div>

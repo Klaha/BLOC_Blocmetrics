@@ -32,3 +32,6 @@ gem 'figaro', '1.0'
 
 # Seed Data
 gem 'faker'
+
+# Charts
+gem 'chartkick'
